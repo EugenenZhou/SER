@@ -145,7 +145,7 @@ class ReliefF(object):
 
 if __name__=='__main__':
 
-    traindata = np.array(pd.read_csv('D:\ZYJ\data\database/opsmile1580/zcl/train.csv'))
+    traindata = np.array(pd.read_csv('D:/data/database/opsmile1580/zcl/train.csv'))
     data=traindata[:,0:1580]
     labels=traindata[:,1580:1581]
     value=[]
@@ -166,46 +166,14 @@ if __name__=='__main__':
     print('featurescors:')
     print(feature_scores)
     top_features=pd.DataFrame(top_features)
-    top_features.to_csv('D:\ZYJ\data\database/relieff\opsm1580/top_feature.csv',index=False)
+    top_features.to_csv('D:/data/database/relieff/opsm1580/top_feature.csv',index=False)
     feature_scores = pd.DataFrame(feature_scores)
-    feature_scores.to_csv('D:\ZYJ\data\database/relieff\opsm1580/feature_scores.csv', index=False)
+    feature_scores.to_csv('D:/data/database/relieff/opsm1580/feature_scores.csv', index=False)
     data_trans=fs.transform(data)
     print(data_trans)
     data_trans = pd.DataFrame(data_trans)
-    data_trans.to_csv('D:\ZYJ\data\database/relieff\opsm1580/data_trans.csv', index=False)
+    data_trans.to_csv('D:/data/database/relieff/opsm1580/data_trans.csv', index=False)
 
-
-    # #对300特征求relief
-    # traindata = np.array(pd.read_csv('D:\ZYJ\data\opensmile1582\selectdata/relieff3/trainangphap.csv'))
-    # data = traindata[:, 0:300]
-    # labels = traindata[:, 300:301]
-    #
-    # value = []
-    # for i in labels:
-    #     a = 0 if int(i) == 0 else 1
-    #     value.append(a)
-    # label = np.array(value)
-    # label = np.reshape(label, (2126,))
-    # # datass=np.array([[1,2,3,4,4,4,4,4,4,4,4],[1,2,4,3,2,3,1,2,3,4,2],[2,3,6,7,1,8,9,3,3,2,1],[3,2,4,3,2,1,2,3,4,4,5]])
-    # # labelss=np.array([0,0,1,1])
-    # # print(datass.shape)
-    # # print(labelss.shape)
-    # # labelsss=np.reshape(labelss,(4,1))
-    # # print(labelsss.shape)
-    # fs = ReliefF(n_features_to_keep=10)
-    # top_features, feature_scores = fs.fit(data, label)
-    # print('topfeature:')
-    # print(top_features)
-    # print('featurescors:')
-    # print(feature_scores)
-    # top_features = pd.DataFrame(top_features)
-    # top_features.to_csv('D:/ZYJ/data/opensmile1582/selectdata/relieff3/m2top_feature.csv', index=False)
-    # feature_scores = pd.DataFrame(feature_scores)
-    # feature_scores.to_csv('D:/ZYJ/data/opensmile1582/selectdata/relieff3/m2feature_scores.csv', index=False)
-    # data_trans = fs.transform(data)
-    # print(data_trans)
-    # data_trans = pd.DataFrame(data_trans)
-    # data_trans.to_csv('D:/ZYJ/data/opensmile1582/selectdata/relieff3/m2data_trans.csv', index=False)
 
 
 

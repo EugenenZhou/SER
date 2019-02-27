@@ -64,19 +64,19 @@ def creatmodel(train_x, train_y, vaild_x, vaild_y,dim_length,save_path):
 
 def load_data(data_name):
     if data_name=='op384':
-        traindata = np.array(pd.read_csv('F:\data\opsm384/train.csv'))
-        vailddata=np.array(pd.read_csv('F:\data\opsm384/vaild.csv'))
-        testdata = np.array(pd.read_csv('F:\data\opsm384/test.csv'))
+        traindata = np.array(pd.read_csv('F:/data/opsm384/train.csv'))
+        vailddata=np.array(pd.read_csv('F:/data/opsm384/vaild.csv'))
+        testdata = np.array(pd.read_csv('F:/data/opsm384/test.csv'))
         return traindata,vailddata,testdata
     if data_name=='op1580':
-        traindata = np.array(pd.read_csv('F:\data\opsm1580\zcl/ztrain.csv'))
-        vailddata=np.array(pd.read_csv('F:\data\opsm1580\zcl/zvaild.csv'))
-        testdata = np.array(pd.read_csv('F:\data\opsm1580\zcl/ztest.csv'))
+        traindata = np.array(pd.read_csv('F:/data/opsm1580/zcl/ztrain.csv'))
+        vailddata=np.array(pd.read_csv('F:/data/opsm1580/zcl/zvaild.csv'))
+        testdata = np.array(pd.read_csv('F:/data/opsm1580/zcl/ztest.csv'))
         return traindata,vailddata,testdata
     if data_name=='sxop1580':
-        traindata = np.array(pd.read_csv('F:\data\opsm1580\sx300train1580.csv'))
-        vailddata=np.array(pd.read_csv('F:\data\opsm1580\sx300vaild1580.csv'))
-        testdata = np.array(pd.read_csv('F:\data\opsm1580\sx300test1580.csv'))
+        traindata = np.array(pd.read_csv('F:/data/opsm1580/sx300train1580.csv'))
+        vailddata=np.array(pd.read_csv('F:/data/opsm1580/sx300vaild1580.csv'))
+        testdata = np.array(pd.read_csv('F:/data/opsm1580/sx300test1580.csv'))
         return traindata,vailddata,testdata
 
 
@@ -131,7 +131,7 @@ if __name__ == '__main__':
     # total_acc=[]
     dim_length = 300
     ks=[]
-    savepath1='F:\savep/m1.hdf5'
+    savepath1='F:/savep/m1.hdf5'
 
 
     traindata, vailddata, testdata = load_data('sxop1580')

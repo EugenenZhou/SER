@@ -78,9 +78,9 @@ def creatmodel(train_x,train_y,vaild_x,vaild_y,save_path,std):
 
 def load_data(data_name):
     if data_name=='12mfcc':
-        traindata = np.array(pd.read_csv('F:\data/12mfcc/12train.csv'))
-        vailddata = np.array(pd.read_csv('F:\data/12mfcc/12vaild.csv'))
-        testdata = np.array(pd.read_csv('F:\data/12mfcc/12test.csv'))
+        traindata = np.array(pd.read_csv('F:/data/12mfcc/12train.csv'))
+        vailddata = np.array(pd.read_csv('F:/data/12mfcc/12vaild.csv'))
+        testdata = np.array(pd.read_csv('F:/data/12mfcc/12test.csv'))
         return traindata,vailddata,testdata
 
 
@@ -124,7 +124,7 @@ def preprocess(traindata,vailddata,testdata):
 
 if __name__ == '__main__':
     traindata, vailddata, testdata=load_data('12mfcc')
-    path = 'D:\ZYJ\savep/m2.hd5f'
+    path = 'D:/savep/m1.hd5f'
     squlength = 200  # 样本长度
     datadim = 12  # 样本维度数
     x_train, x_trainlabel, x_vaild, x_vaildlabel, x_test, x_testlabel=preprocess(traindata, vailddata, testdata)

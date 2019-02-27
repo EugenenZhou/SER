@@ -138,8 +138,6 @@ def fbmfcc(path,fb_ext=1):
 
 
 
-# fb=fbmfcc('D:\ZYJ\IEMOCAP\ev/ang/Ses01F_impro05_F011.wav')
-# print('1')
 
 
 
